@@ -1,0 +1,61 @@
+{
+  "name": "@dsh-external/dsh-auth-tailscale",
+  "description": "Tailscale Serve authentication adapter for dsh Connection",
+  "version": "0.1.0-rc.6-auth.1",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "cordis.patch.yml",
+    "lib/**/*.js",
+    "lib/**/*.d.ts",
+    "LICENSE",
+    "NOTICE.md",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rimraf lib coverage",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "pnpm run clean && tsc -p tsconfig.build.json",
+    "prepare": "pnpm run build",
+    "test": "vitest run",
+    "check": "pnpm run typecheck && pnpm run test && pnpm run build"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sperictao/dsh-auth-tailscale.git"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@dsh-external/dsh-client-connection-authz": "0.1.0-rc.6-authz.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@dsh-external/dsh-client-connection-authz": "git+https://github.com/sperictao/dsh-client-connection-authz.git#07b02ae52e394f1a9cf74cb37b9976731f0d0d78",
+    "@types/node": "^24.10.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

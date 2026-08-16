@@ -1,0 +1,7 @@
+- insert:
+    - id: tailscale-auth
+      name: '@dsh-external/dsh-auth-tailscale'
+      config:
+        allowedLogins: !!js (process.env.DSH_TAILSCALE_ALLOWED_LOGINS ?? '').split(',').map((value) => value.trim()).filter(Boolean)
+        useCapability: !!js process.env.DSH_TAILSCALE_USE_CAPABILITY
+        adminCapability: !!js process.env.DSH_TAILSCALE_ADMIN_CAPABILITY
