@@ -16,8 +16,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1(@deepseek-ai/cordis-plugin-include@1.0.6)(@deepseek-ai/cordis-plugin-loader@1.0.2)
       '@dsh-external/dsh-client-connection-authz':
-        specifier: git+https://github.com/sperictao/dsh-client-connection-authz.git#07b02ae52e394f1a9cf74cb37b9976731f0d0d78
-        version: git+https://github.com/sperictao/dsh-client-connection-authz.git#07b02ae52e394f1a9cf74cb37b9976731f0d0d78(4d97f918f32bf0a0e5cc153682aa7b50)
+        specifier: git+https://github.com/sperictao/dsh-client-connection-authz.git#873c465f140310e5ecc54ff797932e27bccb8f0e
+        version: git+https://github.com/sperictao/dsh-client-connection-authz.git#873c465f140310e5ecc54ff797932e27bccb8f0e(4d97f918f32bf0a0e5cc153682aa7b50)
       '@types/node':
         specifier: ^24.10.0
         version: 24.13.3
@@ -483,8 +483,8 @@ packages:
   '@deepseek-ai/schemastery@3.18.1':
     resolution: {integrity: sha512-Qn0FCSwCQnpnj6SB31I6i2sIKgKWnkbJM8O0EU91Gv2UsYVvtZTl6IA0sCwk2e2MZf5S8w5hpq9QkeVvK9qwxg==}
 
-  '@dsh-external/dsh-client-connection-authz@git+https://github.com/sperictao/dsh-client-connection-authz.git#07b02ae52e394f1a9cf74cb37b9976731f0d0d78':
-    resolution: {commit: 07b02ae52e394f1a9cf74cb37b9976731f0d0d78, repo: https://github.com/sperictao/dsh-client-connection-authz.git, type: git}
+  '@dsh-external/dsh-client-connection-authz@git+https://github.com/sperictao/dsh-client-connection-authz.git#873c465f140310e5ecc54ff797932e27bccb8f0e':
+    resolution: {commit: 873c465f140310e5ecc54ff797932e27bccb8f0e, repo: https://github.com/sperictao/dsh-client-connection-authz.git, type: git}
     version: 0.1.0-rc.6-authz.1
     engines: {node: '>=22.5'}
     peerDependencies:
@@ -1593,7 +1593,7 @@ snapshots:
       '@deepseek-ai/cosmokit': 1.8.2
       '@standard-schema/spec': 1.1.0
 
-  '@dsh-external/dsh-client-connection-authz@git+https://github.com/sperictao/dsh-client-connection-authz.git#07b02ae52e394f1a9cf74cb37b9976731f0d0d78(4d97f918f32bf0a0e5cc153682aa7b50)':
+  '@dsh-external/dsh-client-connection-authz@git+https://github.com/sperictao/dsh-client-connection-authz.git#873c465f140310e5ecc54ff797932e27bccb8f0e(4d97f918f32bf0a0e5cc153682aa7b50)':
     dependencies:
       '@deepseek-ai/cordis': 4.0.1(@deepseek-ai/cordis-plugin-include@1.0.6)(@deepseek-ai/cordis-plugin-loader@1.0.2)
       '@deepseek-ai/dsh-attachment': 0.1.0-rc.6(@deepseek-ai/cordis@4.0.1)(@deepseek-ai/dsh-brand@0.1.0-rc.6(@deepseek-ai/cordis@4.0.1)(@deepseek-ai/dsh-invariants@0.1.0-rc.6(@deepseek-ai/cordis@4.0.1)))(@deepseek-ai/dsh-invariants@0.1.0-rc.6(@deepseek-ai/cordis@4.0.1))

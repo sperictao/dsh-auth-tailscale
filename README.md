@@ -12,12 +12,14 @@ capability JSON 或权限不足都会 fail closed。
 ## 安装
 
 ```bash
+gh auth setup-git
 dsh plugin --profile web add \
-  git+ssh://git@github.com/sperictao/dsh-client-connection-authz.git \
-  git+ssh://git@github.com/sperictao/dsh-auth-tailscale.git
+  git+https://github.com/sperictao/dsh-client-connection-authz.git \
+  git+https://github.com/sperictao/dsh-auth-tailscale.git
 ```
 
-两个仓库目前是 private，安装机需要有对应 GitHub SSH 权限。
+两个仓库目前是 private；上面的已验证路径使用当前 `gh` 登录为 Git 配置 HTTPS
+凭据。也可以改用已配置公钥的 SSH URL。
 
 ## 配置
 

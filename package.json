@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",
-    "@dsh-external/dsh-client-connection-authz": "git+https://github.com/sperictao/dsh-client-connection-authz.git#07b02ae52e394f1a9cf74cb37b9976731f0d0d78",
+    "@dsh-external/dsh-client-connection-authz": "git+https://github.com/sperictao/dsh-client-connection-authz.git#873c465f140310e5ecc54ff797932e27bccb8f0e",
     "@types/node": "^24.10.0",
     "rimraf": "^6.0.1",
     "typescript": "^5.9.3",
