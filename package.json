@@ -48,7 +48,7 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",
-    "@dsh-external/dsh-client-connection-authz": "0.1.0-rc.6-authz.1"
+    "@dsh-external/dsh-client-connection-authz": "^0.1.0-rc.8-authz.1"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",
