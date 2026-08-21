@@ -107,6 +107,14 @@ App Capability 需要 Tailscale `1.92+`。自定义 capability 名应使用你�
 - 同机其它进程仍可能伪造 localhost 请求头；这是本机进程信任边界，不是 Tailscale
   能解决的远程边界。
 
+## 兼容范围
+
+本插件无 dsh 运行时依赖（仅 cordis + schemastery + authz 插件的类型接口），
+与 dsh 版本解耦；对 `@dsh-external/dsh-client-connection-authz` 的 peer 范围
+（package.json 的 `^0.1.0-rc.8-authz.1`）跟随 authz 插件滚动，是兼容性的唯一
+事实来源。版本号与 authz 插件保持同 rc 对齐（如 `0.1.0-rc.8-auth.1`），仅为
+可读性，不参与依赖解析。
+
 ## 开发
 
 先确保当前 GitHub 凭据有权读取私有 connection 仓库，再运行：

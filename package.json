@@ -1,7 +1,7 @@
 {
   "name": "@dsh-external/dsh-auth-tailscale",
   "description": "Tailscale Serve authentication adapter for dsh Connection",
-  "version": "0.1.0-rc.6-auth.1",
+  "version": "0.1.0-rc.8-auth.1",
   "private": true,
   "type": "module",
   "main": "lib/index.js",
