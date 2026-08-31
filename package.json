@@ -1,7 +1,7 @@
 {
   "name": "@dsh-external/dsh-auth-tailscale",
   "description": "Tailscale Serve authentication adapter for dsh Connection",
-  "version": "0.1.1-rc.2-auth.2",
+  "version": "0.1.2-alpha.2-auth.1",
   "private": true,
   "type": "module",
   "main": "lib/index.js",
@@ -48,7 +48,7 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",
-    "@dsh-external/dsh-client-connection-authz": "^0.1.1-rc.2-authz.3"
+    "@dsh-external/dsh-client-connection-authz": "^0.1.2-alpha.2-authz.1"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",
