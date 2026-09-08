@@ -110,8 +110,14 @@ describe('TailscaleConnectionAuthorizer', () => {
     }))).toEqual({ allowed: false, status: 403 })
   })
 
-  it('fails loudly on empty, duplicate, or ambiguous configuration', () => {
-    expect(() => new TailscaleConnectionAuthorizer({ allowedLogins: [] })).toThrow(/allowedLogins/)
+  it('denies every login when the allowlist is empty (fail closed)', () => {
+    const authorizer = new TailscaleConnectionAuthorizer({ allowedLogins: [] })
+    expect(authorizer.authorize(facts({}))).toEqual({ allowed: false, status: 401 })
+    expect(authorizer.authorize(facts({ 'tailscale-user-login': 'alice@example.com' })))
+      .toEqual({ allowed: false, status: 403 })
+  })
+
+  it('fails loudly on duplicate or ambiguous configuration', () => {
     expect(() => new TailscaleConnectionAuthorizer({
       allowedLogins: ['alice@example.com', 'alice@example.com'],
     })).toThrow(/duplicate/)

@@ -75,10 +75,8 @@ export class TailscaleConnectionAuthorizer implements ConnectionRequestAuthorize
   }
 }
 
+/** Empty allowlist is valid and denies every login (fail closed). */
 function validatedAllowedLogins(logins: readonly string[]): ReadonlySet<string> {
-  if (!Array.isArray(logins) || logins.length === 0) {
-    throw new Error('tailscale auth: allowedLogins must contain at least one login')
-  }
   const result = new Set<string>()
   for (const login of logins) {
     if (login.length === 0) throw new Error('tailscale auth: allowedLogins cannot contain an empty login')

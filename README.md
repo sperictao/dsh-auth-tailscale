@@ -27,7 +27,7 @@ bundle patch 从环境变量读取策略：
 
 | 变量 | 是否必需 | 含义 |
 | --- | --- | --- |
-| `DSH_TAILSCALE_ALLOWED_LOGINS` | 是 | 逗号分隔、大小写敏感的 Tailscale login allowlist |
+| `DSH_TAILSCALE_ALLOWED_LOGINS` | 否 | 逗号分隔、大小写敏感的 Tailscale login allowlist；不设置时拒绝全部远程登录 |
 | `DSH_TAILSCALE_USE_CAPABILITY` | 否 | 普通远程 API/WS 必须具备的 App Capability |
 | `DSH_TAILSCALE_ADMIN_CAPABILITY` | 否 | 远程访问 `loopback` 特权接口必须具备；不配置时远程特权调用恒为 403 |
 
@@ -40,7 +40,9 @@ export DSH_TAILSCALE_USE_CAPABILITY='example.com/cap/dsh'
 export DSH_TAILSCALE_ADMIN_CAPABILITY='example.com/cap/dsh-admin'
 ```
 
-未设置或解析为空的 allowlist 会让整个 dsh plugin tree 启动失败，不会退回匿名访问。
+未设置或解析为空的 allowlist 是合法配置：插件正常加载并拒绝全部远程登录
+（fail-closed，启动时打一条 warn），不会退回匿名访问；本机访问走 dsh 原生
+launch token，不受影响。
 
 ## 推荐部署
 
