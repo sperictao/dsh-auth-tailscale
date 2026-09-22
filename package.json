@@ -1,7 +1,7 @@
 {
   "name": "@dsh-external/dsh-auth-tailscale",
   "description": "Tailscale Serve authentication adapter for dsh Connection",
-  "version": "0.1.6-alpha.1-auth.1",
+  "version": "0.1.7-alpha.1-auth.1",
   "private": true,
   "type": "module",
   "main": "lib/index.js",
@@ -44,14 +44,14 @@
     "url": "git+https://github.com/sperictao/dsh-auth-tailscale.git"
   },
   "dependencies": {
-    "@deepseek-ai/schemastery": "^3.18.1"
+    "@deepseek-ai/schemastery": "^3.18.3"
   },
   "peerDependencies": {
-    "@deepseek-ai/cordis": "^4.0.1",
-    "@dsh-external/dsh-client-connection-authz": "^0.1.6-alpha.1-authz.1"
+    "@deepseek-ai/cordis": "^4.0.3",
+    "@dsh-external/dsh-client-connection-authz": "^0.1.7-alpha.1-authz.1"
   },
   "devDependencies": {
-    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/cordis": "^4.0.3",
     "@dsh-external/dsh-client-connection-authz": "file:../dsh-client-connection-authz",
     "@types/node": "^24.10.0",
     "rimraf": "^6.0.1",

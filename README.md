@@ -113,8 +113,8 @@ App Capability 需要 Tailscale `1.92+`。自定义 capability 名应使用你�
 
 本插件无 dsh 运行时依赖（仅 cordis + schemastery + authz 插件的类型接口），
 与 dsh 版本解耦；对 `@dsh-external/dsh-client-connection-authz` 的 peer 范围
-（package.json 的 `^0.1.6-alpha.1-authz.1`）跟随 authz 插件滚动，是兼容性的唯一
-事实来源。版本号与 authz 插件保持同线对齐（如 `0.1.6-alpha.1-auth.1`），仅为
+（package.json 的 `^0.1.7-alpha.1-authz.1`）跟随 authz 插件滚动，是兼容性的唯一
+事实来源。版本号与 authz 插件保持同线对齐（如 `0.1.7-alpha.1-auth.1`），仅为
 可读性，不参与依赖解析。
 
 ## 开发
